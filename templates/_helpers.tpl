@@ -23,7 +23,7 @@ Create chart name and version as used by the chart label.
 
 {{/* Generate datadog labels */}}
 {{- define "flagr.datadogLabels" }}
-tags.datadoghq.com/env: {{ default "production" .Values.datadog.env }}
+tags.datadoghq.com/env: {{ default "prod" .Values.datadog.env }}
 tags.datadoghq.com/service: {{ default "flagr" .Values.datadog.serviceName }}
 tags.datadoghq.com/version: {{ default "unset" .Values.datadog.flagrVersion }}
 tags.datadoghq.com/namespace: {{ .Release.Namespace }}
