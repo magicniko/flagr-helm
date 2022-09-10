@@ -1,18 +1,13 @@
-# Default values for flagr.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
-replicaCount: 1
+# If you set autoscaling.enabled below, this value doesn't matter
+replicaCount: 2
 
 image:
-  repository:
+  repository: ghcr.io/openflagr/flagr
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1.1.14"
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -78,6 +73,13 @@ autoscaling:
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
+  #
+
+datadog: {}
+#   enabled: "true"
+#   env: "production"
+#   serviceName: "flagr"
+#   flagrVersion: 1.1.14
 
 nodeSelector: {}
 

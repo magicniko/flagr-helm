@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 18000
+              containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -58,6 +58,9 @@ spec:
                 name: flagr
                 key: {{ $secretKey }}
           {{- end }}
+          {{- end }}
+          {{- if .Values.datadog.enabled }}
+          {{- include "flagr.datadogEnv" . | nindent 10 }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
