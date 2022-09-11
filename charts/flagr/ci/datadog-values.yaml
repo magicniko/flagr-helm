@@ -1,0 +1,5 @@
+datadog:
+  enabled: "true"
+  env: "production"
+  serviceName: "flagr"
+  flagrVersion: 1.1.14
