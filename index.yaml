@@ -3,6 +3,20 @@ entries:
   flagr:
   - apiVersion: v2
     appVersion: 1.1.14
+    created: "2022-09-11T21:01:12.655530641Z"
+    description: A Helm chart for Flagr.
+    digest: a31422124cad57f377ae49645d1395a0a9168c4f3a4192d5c5aef2eb6d5dcd79
+    maintainers:
+    - email: 102255833+magicniko@users.noreply.github.com
+      name: niko
+      url: https://magiceden.io
+    name: flagr
+    type: application
+    urls:
+    - https://github.com/magicniko/flagr-helm/releases/download/flagr-0.1.6/flagr-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.1.14
     created: "2022-09-11T20:32:29.728549648Z"
     description: A Helm chart for Flagr.
     digest: d59f95b6384732577c6447bdeb56b3c0c8d1745bd855ae90e262c9d36eb16bce
@@ -15,4 +29,4 @@ entries:
     urls:
     - https://github.com/magicniko/flagr-helm/releases/download/flagr-0.1.5/flagr-0.1.5.tgz
     version: 0.1.5
-generated: "2022-09-11T20:32:29.728555249Z"
+generated: "2022-09-11T21:01:12.655538041Z"
