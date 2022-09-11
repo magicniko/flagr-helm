@@ -67,25 +67,25 @@ resources:
     cpu: 100m
     memory: 128Mi
 
-autoscaling:
-  enabled: false
-  minReplicas: 2
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 50
-  #
+autoscaling: {}
+#   enabled: true
+#   minReplicas: 2
+#   maxReplicas: 100
+#   targetCPUUtilizationPercentage: 80
+#   targetMemoryUtilizationPercentage: 50
+
+cloudflared: {}
+#   enabled: true
+#   tunnelId: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+#   ingressHostname: "flagr-admin.example.com"
+#   cloudflaredImage: "cloudflare/cloudflared"
+#   cloudflaredVersion: "2022.9.0-amd64"
 
 datadog: {}
 #   enabled: "true"
 #   env: "production"
 #   serviceName: "flagr"
 #   flagrVersion: 1.1.14
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
 
 flagrEnv: {}
 #   foo: bar
@@ -99,3 +99,9 @@ externalSecrets: {}
 #     FLAGR_DB_PASSWORD:
 #       secretName: ssm-secret-name
 #       property: password
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
