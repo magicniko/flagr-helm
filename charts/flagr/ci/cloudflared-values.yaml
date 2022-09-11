@@ -1,0 +1,6 @@
+cloudflared:
+  enabled: true
+  tunnelId: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+  ingressHostname: "flagr-admin.example.com"
+  cloudflaredImage: "cloudflare/cloudflared"
+  cloudflaredVersion: "2022.9.0-amd64"
